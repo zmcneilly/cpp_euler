@@ -15,9 +15,10 @@ all:
 	g++ -o bin/problem_3 problem_3.cpp -I. -L./libs -lprimes
 	g++ -o bin/problem_4 problem_4.cpp
 	g++ -o bin/problem_5 problem_5.cpp
+	g++ -o bin/problem_6 problem_6.cpp
 
 dev:
-	g++ -o bin/problem_6 problem_6.cpp
+	g++ -o bin/problem_7 problem_7.cpp -I. -L./libs -lprimes
 
 clean:
 	rm -f bin/*
