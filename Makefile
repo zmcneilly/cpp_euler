@@ -4,6 +4,11 @@
 
 all:
 	make clean
+	make build
+	make install
+
+build:
+	export LD_LIBRARY_PATH=`pwd`/libs:${LD_LIBRARY_PATH}
 	if [[ ! -d libs ]]; then mkdir libs; fi
 	g++ -c -fPIC primes.cpp -o libs/primes.o
 	g++ -shared -Wl,-soname,libprimes.so.1 -o libs/libprimes.so.1.0.1 libs/primes.o
@@ -16,10 +21,14 @@ all:
 	g++ -o bin/problem_4 problem_4.cpp
 	g++ -o bin/problem_5 problem_5.cpp
 	g++ -o bin/problem_6 problem_6.cpp
+	g++ -o bin/problem_7 problem_7.cpp -I. -L./libs -lprimes
 
 dev:
-	g++ -o bin/problem_7 problem_7.cpp -I. -L./libs -lprimes
 
 clean:
 	rm -f bin/*
 	rm -f libs/*
+
+install:
+	if [[ ! -d ~/libs ]]; then mkdir ~/libs; fi
+	cp -a libs/* ~/libs/
