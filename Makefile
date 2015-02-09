@@ -28,9 +28,10 @@ build:
 	g++ -o bin/problem_11 problem_11.cpp
 	g++ -o bin/problem_12 problem_12.cpp
 	g++ -o bin/problem_13 problem_13.cpp
+	g++ -o bin/problem_14 problem_14.cpp
 
 dev:
-	g++ -o bin/problem_14 problem_14.cpp
+	g++ -o bin/problem_15 problem_15.cpp
 
 clean:
 	rm -f bin/*
