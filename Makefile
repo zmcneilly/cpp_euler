@@ -25,9 +25,10 @@ build:
 	g++ -o bin/problem_8 problem_8.cpp
 	g++ -o bin/problem_9 problem_9.cpp
 	g++ -o bin/problem_10 problem_10.cpp -I. -L./libs -lprimes
+	g++ -o bin/problem_11 problem_11.cpp
 
 dev:
-	g++ -o bin/problem_11 problem_11.cpp
+	g++ -o bin/problem_12 problem_12.cpp
 
 clean:
 	rm -f bin/*
