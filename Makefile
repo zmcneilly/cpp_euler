@@ -32,7 +32,7 @@ build:
 	g++ -o bin/problem_15 problem_15.cpp
 
 dev:
-	g++ -o bin/problem_16 problem_16.cpp
+	g++ -o bin/problem_16 problem_16.cpp -lgmp -std=c++11
 
 clean:
 	rm -f bin/*
