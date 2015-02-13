@@ -31,9 +31,11 @@ build:
 	g++ -o bin/problem_14 problem_14.cpp
 	g++ -o bin/problem_15 problem_15.cpp
 	g++ -o bin/problem_16 problem_16.cpp -lgmp -std=c++11
+	g++ -o bin/problem_17 problem_17.cpp -std=c++11
+	g++ -o bin/problem_18 problem_18.cpp -std=c++11
 
 dev:
-	g++ -o bin/problem_17 problem_17.cpp -std=c++11
+	g++ -o bin/problem_19 problem_19.cpp -std=c++11
 
 clean:
 	rm -f bin/*
